@@ -1,4 +1,4 @@
-# 🏥 Hospital Management System
+#  Hospital Management System
 
 A modern and responsive Hospital Management System built using **HTML, CSS, JavaScript, Node.js, Express.js, MongoDB Atlas, and Mongoose**. This application allows users to register, view, and delete patient records through an attractive and user-friendly dashboard.
 
@@ -38,18 +38,23 @@ public/
 ```
 
 ##  Installation
-
+```bash
 1. npm init -y
-
+```
 
   
 2. Install Package
+
 
 ```bash
 npm install express mongoose
 ```
 
+
+
 3. Add your MongoDB Atlas connection string in `server.js`.
+
+
 
 4. Start the server
 
@@ -57,11 +62,15 @@ npm install express mongoose
 node server.js
 ```
 
+
+
 5. Open your browser and visit:
 
 ```
 http://localhost:3000
 ```
+
+
 
 ##  Features Overview
 
