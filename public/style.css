@@ -1,0 +1,669 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   Reset
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+
+    background-size: 400% 400%;
+
+    animation: bgMove 12s ease infinite;
+
+    color: #222;
+
+    padding: 30px;
+
+}
+
+/* ===========================
+   Background Animation
+=========================== */
+
+@keyframes bgMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header {
+
+    width: 100%;
+
+    margin-bottom: 30px;
+
+}
+
+.logo {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #fff;
+
+}
+
+.logo i {
+
+    font-size: 45px;
+
+    color: #38bdf8;
+
+}
+
+.logo h1 {
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+/* ===========================
+   Main Container
+=========================== */
+
+.container {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 360px 1fr;
+
+    gap: 25px;
+
+}
+
+/* ===========================
+   Glass Card
+=========================== */
+
+.form-box,
+.table-box {
+
+    background: rgba(255, 255, 255, .15);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, .25);
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+
+}
+
+/* ===========================
+   Form Heading
+=========================== */
+
+.form-box h2,
+.table-header h2 {
+
+    color: #fff;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.form-box h2 i,
+.table-header h2 i {
+
+    color: #38bdf8;
+
+}
+
+/* ===========================
+   Form
+=========================== */
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.input-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.input-group label {
+
+    color: #fff;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+
+    font-weight: 500;
+
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+.input-group input {
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    background: #fff;
+
+    transition: .3s;
+
+}
+
+.input-group input:focus {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, .35);
+
+}
+
+/* ===========================
+   Button
+=========================== */
+
+button {
+
+    margin-top: 10px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background: linear-gradient(90deg, #0ea5e9, #2563eb);
+
+    color: #fff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 25px rgba(37, 99, 235, .45);
+
+}
+
+/* ===========================
+   Table Container
+=========================== */
+
+.table-responsive {
+
+    overflow-x: auto;
+
+    border-radius: 12px;
+
+    background: #fff;
+
+    padding: 8px;
+
+}
+
+/* ===========================
+   Table
+=========================== */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+
+}
+
+thead {
+
+    background: #2563eb;
+
+    color: #fff;
+
+}
+
+thead th {
+
+    padding: 16px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+}
+
+tbody td {
+
+    padding: 15px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 14px;
+
+    color: #333;
+
+}
+
+tbody tr {
+
+    transition: .3s;
+
+}
+
+tbody tr:hover {
+
+    background: #eff6ff;
+
+    transform: scale(1.01);
+
+}
+
+/* ===========================
+   Delete Button
+=========================== */
+
+.btn-delete {
+
+    background: #ef4444;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 8px 14px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.btn-delete:hover {
+
+    background: #dc2626;
+
+    transform: translateY(-2px);
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer {
+
+    margin-top: 35px;
+
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 15px;
+
+    opacity: .95;
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+    height: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #dbeafe;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #2563eb;
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #1d4ed8;
+
+}
+
+/* ===========================
+   Fade Animation
+=========================== */
+
+.form-box,
+.table-box {
+
+    animation: fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:1100px) {
+
+    .container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .form-box {
+
+        order: 1;
+
+    }
+
+    .table-box {
+
+        order: 2;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    body {
+
+        padding: 15px;
+
+    }
+
+    .logo {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+    .logo h1 {
+
+        font-size: 26px;
+
+        text-align: center;
+
+    }
+
+    .logo i {
+
+        font-size: 38px;
+
+    }
+
+    .form-box,
+    .table-box {
+
+        padding: 20px;
+
+    }
+
+    .form-box h2,
+    .table-header h2 {
+
+        font-size: 22px;
+
+    }
+
+    input {
+
+        font-size: 15px;
+
+    }
+
+    button {
+
+        width: 100%;
+
+    }
+
+    table {
+
+        min-width: 700px;
+
+    }
+
+}
+
+@media(max-width:480px) {
+
+    body {
+
+        padding: 10px;
+
+    }
+
+    .logo h1 {
+
+        font-size: 22px;
+
+    }
+
+    .logo i {
+
+        font-size: 32px;
+
+    }
+
+    .form-box,
+    .table-box {
+
+        padding: 15px;
+
+        border-radius: 14px;
+
+    }
+
+    .form-box h2,
+    .table-header h2 {
+
+        font-size: 20px;
+
+    }
+
+    .input-group input {
+
+        padding: 12px;
+
+        font-size: 14px;
+
+    }
+
+    button {
+
+        padding: 12px;
+
+        font-size: 15px;
+
+    }
+
+    footer {
+
+        font-size: 13px;
+
+    }
+
+}
+
+/* ===========================
+   Extra Effects
+=========================== */
+
+.form-box:hover,
+.table-box:hover {
+
+    transform: translateY(-5px);
+
+    transition: .35s;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+
+}
+
+button:active {
+
+    transform: scale(.98);
+
+}
+
+input::placeholder {
+
+    color: #9ca3af;
+
+}
+
+table td:first-child {
+
+    font-weight: 600;
+
+    color: #2563eb;
+
+}
+
+table td:nth-child(2) {
+
+    font-weight: 600;
+
+}
+
+table td:last-child {
+
+    text-align: center;
+
+}
