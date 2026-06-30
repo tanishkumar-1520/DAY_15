@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-hospital"></i>
+
+            <h1>Hospital Management System</h1>
+
+        </div>
+
+    </header>
+
+    <!-- Main Container -->
+
+    <div class="container">
+
+        <!-- Left Side -->
+
+        <div class="form-box">
+
+            <h2>
+                <i class="fa-solid fa-user-plus"></i>
+                Register Patient
+            </h2>
+
+            <form id="patientForm">
+
+                <div class="input-group">
+
+                    <label>Patient Name</label>
+
+                    <input type="text" id="name" placeholder="Enter Patient Name" required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Age</label>
+
+                    <input type="number" id="age" placeholder="Enter Age" required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Disease</label>
+
+                    <input type="text" id="disease" placeholder="Enter Disease" required>
+
+                </div>
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Save Patient
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="table-box">
+
+            <div class="table-header">
+
+                <h2>
+
+                    <i class="fa-solid fa-bed-pulse"></i>
+
+                    Patient Records
+
+                </h2>
+
+            </div>
+
+            <div class="table-responsive">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Name</th>
+
+                            <th>Age</th>
+
+                            <th>Disease</th>
+
+                            <th>Date</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="patientTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Hospital Management System |
+            Designed with ❤️ using HTML, CSS, JavaScript, Node.js & MongoDB
+
+        </p>
+
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
