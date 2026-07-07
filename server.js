@@ -15,7 +15,6 @@ const PORT = 3000;
 // =========================
 // MongoDB Atlas Connection
 // =========================
-// Replace USERNAME, PASSWORD and CLUSTER with your own values
 
 mongoose.connect(
     "mongodb+srv://rakhi57776_db_user:7835812188@cluster0.fgcgb6v.mongodb.net/NotesDB?retryWrites=true&w=majority&appName=Cluster0"
