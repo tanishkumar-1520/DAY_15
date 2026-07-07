@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management System</title>
+    <title>PatientCare Pro | Hospital Management System</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <!-- Google Font: Open Sans & Poppins for Professional Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome (v6+) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
@@ -18,134 +17,110 @@
 
 <body>
 
-    <!-- Header -->
-
-    <header>
-
-        <div class="logo">
-
-            <i class="fa-solid fa-hospital"></i>
-
-            <h1>Hospital Management System</h1>
-
+    <!-- Header / Navbar -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand">
+                <i class="fa-solid fa-notes-medical"></i>
+                <span class="brand-text">Patient<span class="brand-subtext">Care Pro</span></span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">
+                    <i class="fa-solid fa-user-check"></i> Registration
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-hospital-user"></i> Records
+                </a>
+            </nav>
         </div>
+    </header>   
 
-    </header>
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="content-container">
 
-    <!-- Main Container -->
-
-    <div class="container">
-
-        <!-- Left Side -->
-
-        <div class="form-box">
-
-            <h2>
-                <i class="fa-solid fa-user-plus"></i>
-                Register Patient
-            </h2>
-
-            <form id="patientForm">
-
-                <div class="input-group">
-
-                    <label>Patient Name</label>
-
-                    <input type="text" id="name" placeholder="Enter Patient Name" required>
-
-                </div>
-
-                <div class="input-group">
-
-                    <label>Age</label>
-
-                    <input type="number" id="age" placeholder="Enter Age" required>
-
-                </div>
-
-                <div class="input-group">
-
-                    <label>Disease</label>
-
-                    <input type="text" id="disease" placeholder="Enter Disease" required>
-
-                </div>
-
-                <button type="submit">
-
-                    <i class="fa-solid fa-floppy-disk"></i>
-
-                    Save Patient
-
-                </button>
-
-            </form>
-
-        </div>
-
-        <!-- Right Side -->
-
-        <div class="table-box">
-
-            <div class="table-header">
-
-                <h2>
-
-                    <i class="fa-solid fa-bed-pulse"></i>
-
-                    Patient Records
-
-                </h2>
-
+            <!-- Title & Info -->
+            <div class="section-title">
+                <h1>Patient Registration Dashboard</h1>
+                <p>Welcome, Doctor. Please use the form on the left to add new patient records.</p>
             </div>
 
-            <div class="table-responsive">
+            <div class="dashboard-grid">
 
-                <table>
+                <!-- 1. Patient Registration Form (Left Column) -->
+                <section class="card form-section">
+                    <div class="card-header">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <h2>New Patient</h2>
+                    </div>
+                    <form id="patientForm" class="patient-form">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fa-solid fa-user"></i> Full Name
+                            </label>
+                            <input type="text" id="name" placeholder="E.g. John Doe" required>
+                        </div>
 
-                    <thead>
+                        <div class="form-group row-group">
+                            <div class="col">
+                                <label for="age">
+                                    <i class="fa-solid fa-baby"></i> Age
+                                </label>
+                                <input type="number" id="age" placeholder="Age" required min="1" max="120">
+                            </div>
+                        </div>
 
-                        <tr>
+                        <div class="form-group">
+                            <label for="disease">
+                                <i class="fa-solid fa-stethoscope"></i> Diagnosis
+                            </label>
+                            <input type="text" id="disease" placeholder="Diagnosis / Condition" required>
+                        </div>
 
-                            <th>ID</th>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">
+                                <i class="fa-solid fa-floppy-disk"></i>
+                                Register Patient
+                            </button>
+                        </div>
+                    </form>
+                </section>
 
-                            <th>Name</th>
+                <!-- 2. Patient Records Table (Right Column) -->
+                <section class="card table-section">
+                    <div class="card-header">
+                        <i class="fa-solid fa-bed-pulse"></i>
+                        <h2>Existing Patient Records</h2>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="medical-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Patient Name</th>
+                                    <th>Age</th>
+                                    <th>Diagnosis</th>
+                                    <th>Reg. Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="patientTableBody">
+                                <!-- JS content injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
 
-                            <th>Age</th>
-
-                            <th>Disease</th>
-
-                            <th>Date</th>
-
-                            <th>Action</th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody id="patientTableBody">
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        </div>
-
-    </div>
+            </div> <!-- /dashboard-grid -->
+        </div> <!-- /content-container -->
+    </main>
 
     <!-- Footer -->
-
-    <footer>
-
-        <p>
-
-            © 2026 Hospital Management System |
-            Designed with ❤️ using HTML, CSS, JavaScript, Node.js & MongoDB
-
-        </p>
-
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 PatientCare Pro. All rights reserved.</p>
+            <p>Designed with <i class="fa-solid fa-heart footer-heart"></i> in Delhi | Build V1.0.1</p>
+        </div>
     </footer>
 
     <script src="app.js"></script>
