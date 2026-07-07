@@ -10,13 +10,15 @@ const app = express();
 app.use(express.static("public"));
 const PORT = 3000;
 
+
+
 // =========================
 // MongoDB Atlas Connection
 // =========================
 // Replace USERNAME, PASSWORD and CLUSTER with your own values
 
 mongoose.connect(
-    "mongodb+srv://USERNAME:PASSWORD@cluster0.fgcgb6v.mongodb.net/NotesDB?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb+srv://rakhi57776_db_user:7835812188@cluster0.fgcgb6v.mongodb.net/NotesDB?retryWrites=true&w=majority&appName=Cluster0"
 )
     .then(() => {
         console.log("✅ MongoDB Atlas Connected Successfully");
