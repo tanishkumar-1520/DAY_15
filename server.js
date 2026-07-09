@@ -17,7 +17,7 @@ const PORT = 3000;
 // =========================
 
 mongoose.connect(
-    "mongodb+srv://rakhi57776_db_user:7835812188@cluster0.fgcgb6v.mongodb.net/NotesDB?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb+srv://YOUR_USSERNAME:YOUR_PASSWORD@cluster0.fgcgb6v.mongodb.net/NotesDB?retryWrites=true&w=majority&appName=Cluster0"
 )
     .then(() => {
         console.log("✅ MongoDB Atlas Connected Successfully");
